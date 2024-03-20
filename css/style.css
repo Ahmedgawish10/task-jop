@@ -327,6 +327,7 @@ a {
   }
   .title_content {
     font-size: 40px !important;
+    text-align: center;
   }
   .about_section .left .left-box {
     -webkit-transition: all 5s ease;
@@ -412,5 +413,16 @@ a {
   right: 20px;
   bottom: 44px;
   border-radius: 5px;
+}
+
+@media only screen and (max-width: 668px) {
+  .flickity-page-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
 }
 /*# sourceMappingURL=style.css.map */

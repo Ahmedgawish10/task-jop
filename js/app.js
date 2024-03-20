@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded",()=>{
-  //  let dotSelected =document.querySelector(".ol");
+    let dotSelected =document.querySelector(".flickity-page-dots");
     //dotSelected.classList.toggle("active");
-    console.log("every thing is okey");
+    console.log(dotSelected,"every thing is okey");
 })
 
   let leftbox =document.querySelector(".left-box");

@@ -6,6 +6,7 @@ body {
 
 
 }
+
 a {
   color: white !important;
   text-decoration: none !important;
@@ -255,6 +256,7 @@ a {
 // media from 500px and less
 
 @media only screen and (max-width: 500px) {
+
   .about_section .right-box.animation-show {
     transition: 2s !important;
     margin-top: -80px;
@@ -269,6 +271,8 @@ a {
   }
   .title_content {
     font-size: 40px !important;
+      text-align: center;
+    
   }
   .about_section {
     & .left {
@@ -350,3 +354,15 @@ a {
   border-radius: 5px;
 }
 // end of scroll icon
+//updated carsoul dots
+@media only screen and (max-width: 668px) {
+  
+// carsoul dots
+.flickity-page-dots{
+  display: flex;
+  justify-content: end;
+}
+
+}
+
+  
