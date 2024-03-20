@@ -272,6 +272,8 @@ a {
     top: 100px;
   }
   .about_section .right-box.animation-show {
+    position: absolute;
+    z-index: 20;
     -webkit-transition: 2s !important;
     transition: 2s !important;
     margin-top: -200px;
@@ -310,15 +312,37 @@ a {
 }
 
 @media only screen and (max-width: 500px) {
-  .about_section .right-box.animation-show {
+  .about_section .right .right-box.animation-show {
     -webkit-transition: 2s !important;
     transition: 2s !important;
-    margin-top: -80px;
+    margin-top: -240px;
   }
-  .about_section .right-box.animation-hide {
+  .about_section .right .right-box.animation-hide {
     -webkit-transition: 2s !important;
     transition: 2s !important;
     margin-top: initial;
+  }
+  .about_section .left {
+    z-index: 20;
+  }
+  .about_section .left .left-box.animation-hide {
+    -webkit-transition: 2s !important;
+    transition: 2s !important;
+    top: 100px;
+  }
+  .about_section .left .left-box.animation-show {
+    top: -220px !important;
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+  .about_section .left .left-box.animation-show .man-moon {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .about_section .left .left-box.animation-show .man-moon img {
+    height: 100% !important;
+    width: 100% !important;
   }
   .scrolling {
     -webkit-box-align: center;
@@ -328,19 +352,6 @@ a {
   .title_content {
     font-size: 40px !important;
     text-align: center;
-  }
-  .about_section .left .left-box {
-    -webkit-transition: all 5s ease;
-    transition: all 5s ease;
-  }
-  .about_section .left .left-box .man-moon {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .about_section .left .left-box .man-moon img {
-    height: 100% !important;
-    width: 100% !important;
   }
 }
 

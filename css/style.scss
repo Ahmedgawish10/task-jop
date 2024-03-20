@@ -3,8 +3,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: #c7dbe6 !important;
-
-
 }
 
 a {
@@ -221,9 +219,10 @@ a {
     top: 100px;
   }
   .about_section .right-box.animation-show {
+    position: absolute;
+    z-index: 20;
     transition: 2s !important;
     margin-top: -200px;
-  
   }
   .about_section .right-box.animation-hide {
     transition: 2s !important;
@@ -256,28 +255,26 @@ a {
 // media from 500px and less
 
 @media only screen and (max-width: 500px) {
-
-  .about_section .right-box.animation-show {
-    transition: 2s !important;
-    margin-top: -80px;
-  
-  }
-  .about_section .right-box.animation-hide {
-    transition: 2s !important;
-    margin-top: initial;
-  }
-  .scrolling {
-    align-items: center;
-  }
-  .title_content {
-    font-size: 40px !important;
-      text-align: center;
-    
-  }
   .about_section {
+    & .right  {
+      & .right-box.animation-show{
+      transition: 2s !important;
+      margin-top: -240px;
+      }
+      & .right-box.animation-hide {
+        transition: 2s !important;
+        margin-top: initial;
+      }
+    }
     & .left {
-      & .left-box {
-        transition: all 5s ease;
+      z-index: 20;
+      .left-box.animation-hide {
+        transition: 2s !important;
+        top: 100px;
+      }
+      & .left-box.animation-show {
+        top: -220px !important;
+        transition: all 2s ease;
         & .man-moon {
           justify-content: flex-end;
           & img {
@@ -287,6 +284,13 @@ a {
         }
       }
     }
+  }
+  .scrolling {
+    align-items: center;
+  }
+  .title_content {
+    font-size: 40px !important;
+    text-align: center;
   }
 }
 // media for screens 0 to 900px
@@ -356,13 +360,9 @@ a {
 // end of scroll icon
 //updated carsoul dots
 @media only screen and (max-width: 668px) {
-  
-// carsoul dots
-.flickity-page-dots{
-  display: flex;
-  justify-content: end;
+  // carsoul dots
+  .flickity-page-dots {
+    display: flex;
+    justify-content: end;
+  }
 }
-
-}
-
-  
